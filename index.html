@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="./easCss.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- cursive font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+    <!-- body font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="./javascript.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <h2>Etch-a-Sketch</h2>
+
+        <div class="gridWrapper" id="gridWrapper"></div>
+
+        <!-- controls  -->
+        <div class="controlsWrapper">
+            <div>
+                <button id="save" onclick="createGrid()" class="clear">Clear</button>
+                <button id="eraser" onclick="erase()" class="eraser">Eraser</button>
+            </div>
+            <div>
+                <input type="range" min="4" max="100" value="32" class="slider" id="input" onchange="changeGridSize(this.value)">
+                <input type="color" id="colorPicker" value="#E37DD5" class="colorPicker" onchange="changeColor()" />
+            </div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
