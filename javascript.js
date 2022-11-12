@@ -62,6 +62,7 @@ const colorSet = (e) => {
     let b = rgb.slice(14, 17);
     let newValue = ConvertRGBtoHex(Number(r), Number(g), Number(b));
     colorPicker.value = newValue;
+    cellColor = newValue;
   }
 };
 
