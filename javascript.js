@@ -43,27 +43,9 @@ const clearGrid = () => {
 
 // color saver and picker
 const colorSet = (e) => {
-  function ColorToHex(color) {
-    let hexadecimal = color.toString(16);
-    return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
-  }
-
-  function ConvertRGBtoHex(red, green, blue) {
-    return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
-  }
-
-  if (e.style.backgroundColor === "") {
-    e.style.backgroundColor = colorPicker.value;
-  } else {
-    console.log("color taken");
-    let rgb = e.style.backgroundColor;
-    let r = rgb.slice(4, 7);
-    let g = rgb.slice(9, 12);
-    let b = rgb.slice(14, 17);
-    let newValue = ConvertRGBtoHex(Number(r), Number(g), Number(b));
-    colorPicker.value = newValue;
-    cellColor = newValue;
-  }
+  e.style.backgroundColor === ""
+    ? (e.style.backgroundColor = colorPicker.value)
+    : (cellColor = e.style.backgroundColor);
 };
 
 console.log("original value", colorPicker.value);
