@@ -30,7 +30,7 @@ const changeGridSize = (n) => {
 };
 
 const erase = () => {
-  cellColor === colorPicker.value
+  cellColor !== "#f6f6f6"
     ? (cellColor = "#f6f6f6")
     : (cellColor = colorPicker.value);
   eraserButton.classList.toggle("eraserActive");
@@ -48,7 +48,6 @@ const colorSet = (e) => {
     : (cellColor = e.style.backgroundColor);
 };
 
-console.log("original value", colorPicker.value);
 // create radios for color slots
 for (let i = 1; i <= 10; i++) {
   const colorSlot = document.createElement("input");
